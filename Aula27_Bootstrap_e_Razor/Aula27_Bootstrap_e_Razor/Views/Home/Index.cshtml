@@ -15,8 +15,65 @@
 	</div>
 </div>
 
+<!--Segunda parte da atividade -->
 
-	<!--
+<div class="container">
+	<div class="row">
+        <div class="col">
+            <h2 class="h5 my-4">My tasks</h2>
+        </div>
+    </div>
+	<ul class="list-group">
+	  <li class="list-group-item">An item</li>
+	  <li class="list-group-item">A second item</li>
+	  <li class="list-group-item">A third item</li>
+	  <li class="list-group-item">A fourth item</li>
+	  <li class="list-group-item">And a fifth one</li>
+	</ul>
+</div>
+
+<!--Código professor
+    <div class="row">
+        <div class="col">
+            <h2 class="h5 my-4">My tasks</h2>
+        </div>
+    </div>
+    <ul class="list-group">
+
+        @{
+            string[] Todos = { "Tarefa 1", "Tarefa 2" };
+
+            @foreach(string Todo in Todos)
+            {
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-auto">
+                            <input 
+                                class="form-check-input me-2" 
+                                type="checkbox" 
+                            >
+                    </div>
+                                <div class="col">
+                                    @Todo
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-sm btn-danger">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                       </li>
+            }
+        }
+
+
+    </ul>
+</div> 
+-->
+
+
+
+	<!-- Código anterior
 	<div class="container"></div>
 	<h2>My tasks</h2>
 	<ul class="list-group">
@@ -29,6 +86,7 @@
 	</div>
 	-->
 
+	<!--
 	<ul class="list-group list-group-horizontal rounded-0 bg-transparent">
 		<li class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
 			<div class="form-check">
@@ -116,3 +174,5 @@
 			</div>
 		</li>
 	</ul>
+
+	-->
