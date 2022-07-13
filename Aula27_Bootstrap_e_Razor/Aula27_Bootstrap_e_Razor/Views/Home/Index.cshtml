@@ -1,51 +1,24 @@
 ﻿@{
-	ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";
 }
 
 <!--Primeia parte da atividade ok -->
 <div class="container">
-	<h1>Todo List</h1>
-	<div class="row">
-		<div class="col">
-			<input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Add task...">
-		</div>
-		<div class="col-auto">
-			<button type="submit" class="btn btn-primary btn-lg ms-2">+</button>
-		</div>
-	</div>
+    <h1>Todo List</h1>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Add task...">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary btn-lg ms-2">+</button>
+        </div>
+    </div>
 </div>
 
 <!--Segunda parte da atividade -->
+<br>
 
 <div class="container">
-	<div class="row">
-        <div class="col">
-            <h2 class="h5 my-4">My tasks</h2>
-        </div>
-    </div>
-	<ul class="list-group">
-	  <li class="list-group-item">
-		<div class="row">
-			<div class="col-auto">
-               <input 
-					class="form-check-input me-2" 
-					type="checkbox" 
-               >
-            </div>
-			<div class="col">
-               Item da lista
-            </div>
-			<div class="col-auto">
-				<button class="btn btn-sm btn-danger">
-					Delete
-				</button>
-			</div>
-		</div>
-	  </li>
-	</ul>
-</div>
-
-<!--Código professor
     <div class="row">
         <div class="col">
             <h2 class="h5 my-4">My tasks</h2>
@@ -54,140 +27,27 @@
     <ul class="list-group">
 
         @{
-
-            string[] Todos = { "Tarefa 1", "Tarefa 2" };
-
-            @foreach(string Todo in Todos)
-            {
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-auto">
-                            <input 
-                                class="form-check-input me-2" 
-                                type="checkbox" 
-                            >
-                    </div>
-                                <div class="col">
-                                    @Todo
-                                </div>
-                                <div class="col-auto">
-                                    <button class="btn btn-sm btn-danger">
-                                        Delete
-                                    </button>
-                                </div>
-                            </div>
-                       </li>
-            }
-
+            string[] Todos = { "Passar roupa", "Lavar cabelo", "Assar pão de queijo" };
         }
-		
-
+        @foreach (string Todo in Todos)
+        {
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-auto">
+                        <input class="form-check-input me-2"
+                           type="checkbox">
+                    </div>
+                    <div class="col">
+                        @Todo
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-sm btn-danger">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </li>
+        }
     </ul>
-</div> 
--->
+</div>
 
-
-
-	<!-- Código anterior
-	<div class="container"></div>
-	<h2>My tasks</h2>
-	<ul class="list-group">
-		<li class="list-group-item active" aria-current="true">An active item</li>
-		<li class="list-group-item">A second item</li>
-		<li class="list-group-item">A third item</li>
-		<li class="list-group-item">A fourth item</li>
-		<li class="list-group-item">And a fifth one</li>
-	</ul>
-	</div>
-	-->
-
-	<!--
-	<ul class="list-group list-group-horizontal rounded-0 bg-transparent">
-		<li class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-			<div class="form-check">
-				<input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
-					   aria-label="..." checked />
-			</div>
-		</li>
-		<li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
-			<p class="lead fw-normal mb-0">Buy groceries for next week</p>
-		</li>
-		<li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
-			<div class="d-flex flex-row justify-content-end mb-1">
-				<a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo">
-					<i class="fas fa-pencil-alt me-3"></i>
-				</a>
-				<button type="button" class="btn btn-danger">Delete</button>
-
-			</div>
-			<div class="text-end text-muted">
-				<a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="Created date">
-					<p class="small mb-0"><i class="fas fa-info-circle me-2"></i>28th Jun 2020</p>
-				</a>
-			</div>
-		</li>
-	</ul>
-	<ul class="list-group list-group-horizontal rounded-0">
-		<li class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-			<div class="form-check">
-				<input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked2"
-					   aria-label="..." />
-			</div>
-		</li>
-		<li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
-			<p class="lead fw-normal mb-0">Renew car insurance</p>
-		</li>
-		<li class="list-group-item px-3 py-1 d-flex align-items-center border-0 bg-transparent">
-			<div class="py-2 px-3 me-2 border border-warning rounded-3 d-flex align-items-center bg-light">
-				<p class="small mb-0">
-					<a href="#!" data-mdb-toggle="tooltip" title="Due on date">
-						<i class="fas fa-hourglass-half me-2 text-warning"></i>
-					</a>
-					28th Jun 2020
-				</p>
-			</div>
-		</li>
-		<li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
-			<div class="d-flex flex-row justify-content-end mb-1">
-				<a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo">
-					<i class="fas fa-pencil-alt me-3"></i>
-				</a>
-				<a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo">
-					<i class="fas fa-trash-alt"></i>
-				</a>
-			</div>
-			<div class="text-end text-muted">
-				<a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="Created date">
-					<p class="small mb-0"><i class="fas fa-info-circle me-2"></i>28th Jun 2020</p>
-				</a>
-			</div>
-		</li>
-	</ul>
-	<ul class="list-group list-group-horizontal rounded-0 mb-2">
-		<li class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-			<div class="form-check">
-				<input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked3"
-					   aria-label="..." />
-			</div>
-		</li>
-		<li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
-			<p class="lead fw-normal mb-0 bg-light w-100 ms-n2 ps-2 py-1 rounded">
-				Sign up for online
-				course
-			</p>
-		</li>
-		<li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
-			<div class="d-flex flex-row justify-content-end mb-1">
-				<a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo">
-					<i class="fas fa-trash-alt"></i>
-				</a>
-			</div>
-			<div class="text-end text-muted">
-				<a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="Created date">
-					<p class="small mb-0"><i class="fas fa-info-circle me-2"></i>28th Jun 2020</p>
-				</a>
-			</div>
-		</li>
-	</ul>
-
-	-->
