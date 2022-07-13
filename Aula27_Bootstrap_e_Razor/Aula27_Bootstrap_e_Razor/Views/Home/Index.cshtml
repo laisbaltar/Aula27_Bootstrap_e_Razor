@@ -24,11 +24,24 @@
         </div>
     </div>
 	<ul class="list-group">
-	  <li class="list-group-item">An item</li>
-	  <li class="list-group-item">A second item</li>
-	  <li class="list-group-item">A third item</li>
-	  <li class="list-group-item">A fourth item</li>
-	  <li class="list-group-item">And a fifth one</li>
+	  <li class="list-group-item">
+		<div class="row">
+			<div class="col-auto">
+               <input 
+					class="form-check-input me-2" 
+					type="checkbox" 
+               >
+            </div>
+			<div class="col">
+               Item da lista
+            </div>
+			<div class="col-auto">
+				<button class="btn btn-sm btn-danger">
+					Delete
+				</button>
+			</div>
+		</div>
+	  </li>
 	</ul>
 </div>
 
@@ -41,6 +54,7 @@
     <ul class="list-group">
 
         @{
+
             string[] Todos = { "Tarefa 1", "Tarefa 2" };
 
             @foreach(string Todo in Todos)
@@ -64,8 +78,9 @@
                             </div>
                        </li>
             }
-        }
 
+        }
+		
 
     </ul>
 </div> 
